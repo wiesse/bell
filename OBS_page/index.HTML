@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <link id = "icon" rel="shortcut icon" href="red.png">  
+        <link rel="stylesheet" type = "text/css" href="bell.css?v=16">
+        <link rel="stylesheet" type = "text/css" href="holiday?v=2.css">
+        <script src="birthdays.js?v=1" type="text/javascript"></script>
+        <script src="names.js?v=1" type="text/javascript"></script>
+        <script src="bell.js?v=16" type="text/javascript"></script>
+        <title>Bell Schedule</title>
+    </head>
+    <body onload = "main();">
+        <div id="flex">
+            <div id="audio_on" onclick="start_bell();">Turn on the Bell</div>
+            <audio id="myAudio">
+                <source src="sounds/bell.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="loudAudio">
+                <source src="sounds/bell2.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div id="logo"><img src="white_logo.png"></div>
+            <div id="date">Date</div>
+        </div>
+		
+        <div id="birthday">
+            Birthday Box		
+        </div>
+
+        <div id="message">
+            Loading...
+        </div>
+        <div class="table_div">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Advisory</th>
+                        <th>1<sup>st</sup> Period</th>
+                        <th>2<sup>nd</sup> Period</th>
+                        <th>3<sup>rd</sup> Period</th>
+                        <th>4<sup>th</sup> Period</th>
+                        <th>5<sup>th</sup> Period</th>
+                        <th>6<sup>th</sup> Period</th>
+                        <th>7<sup>th</sup> Period</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="scheduleA" onclick = "set_schedule(0);">
+                        <th>Regular Schedule</th>
+                        <td id = "advA">8:00-8:32</td>
+                        <td id = "oneA">8:37-9:28</td>
+                        <td id = "twoA">9:33-10:24</td>
+                        <td id = "threeA">10:29-11:20</td>
+                        <td id = "fourA">11:25-12:16</td>
+                        <td id = "fiveA">12:21-1:12</td>
+                        <td id = "sixA">1:17-2:08</td>
+                        <td id = "sevenA">2:13-3:04</td>
+                    </tr>
+                    <tr id="scheduleB" onclick = "set_schedule(1);">
+                        <th>1 Hour Advisory</th>
+                        <td id = "advB">8:00-9:00</td>
+                        <td id = "oneB">9:05-9:52</td>
+                        <td id = "twoB">9:57-10:44</td>
+                        <td id = "threeB">10:49-11:36</td>
+                        <td id = "fourB">11:41-12:28</td>
+                        <td id = "fiveB">12:33-1:20</td>
+                        <td id = "sixB">1:25-2:12</td>
+                        <td id = "sevenB">2:17-3:04</td>
+                    </tr>
+                    <tr id="scheduleC" onclick = "set_schedule(2);">
+                        <th>Focused Friday</th>
+                        <td id = "advC">8:00-8:34</td>
+                        <td id = "oneC">8:39-9:04</td>
+                        <td id = "twoC">9:09-9:34</td>
+                        <td id = "threeC">9:39-10:04</td>
+                        <td id = "fourC">10:09-10:34</td>
+                        <td id = "fiveC">10:39-11:04</td>
+                        <td id = "sixC">11:09-11:34</td>
+                        <td id = "sevenC">11:39-12:04</td>
+                    </tr>
+                    <tr id="scheduleD" onclick = "set_schedule(3);">
+                        <th>Delayed Opening</th>
+                        <td id = "advD">10:00-10:31</td>
+                        <td id = "oneD">10:36-11:10</td>
+                        <td id = "twoD">11:15-11:49</td>
+                        <td id = "threeD">11:54-12:28</td>
+                        <td id = "fourD">12:33-1:07</td>
+                        <td id = "fiveD">1:12-1:46</td>
+                        <td id = "sixD">1:51-2:25</td>
+                        <td id = "sevenD">2:30-3:04</td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <th><a href="https://docs.google.com/spreadsheets/d/10XqliigooZiuEd3-4wUl8FMqHriLvaPbEtJ1PPzlDmM/edit#gid=752731615" target="_blank">Click for schedule</a></th>
+                        <th>Advisory 1</th>
+                        <th>Advisory 2</th>
+                        <th>Session 1</th>
+                        <th>Session 2</th>
+                        <th>Session 3</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr id="scheduleE" onclick = "set_schedule(4);">
+                        <th><a href="https://docs.google.com/spreadsheets/d/10XqliigooZiuEd3-4wUl8FMqHriLvaPbEtJ1PPzlDmM/edit#gid=752731615" target="_blank">Fall Feast</a></th>
+                        <td id = "adv1E">8:00-8:10</td>
+                        <td id = "adv2E">8:10-9:00</td>
+                        <td id = "S1E">9:05-10:00</td>
+                        <td id = "S2E">10:05-11:00</td>
+                        <td id = "S3E">11:05-12:04</td>
+                        <td id = "void1"></td>
+                        <td id = "void2"></td>
+                        <td id = "void3"></td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </div>
+                
+        
+        <div id = "announcements">
+            Daily Announcements
+            
+            <div class="smaller">
+                <?php
+$file = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS25o_Oi8VguzqKjmaSS33lM0KkwKErcjaXbowIXkjb8NFR5Fw66y6gFiwujyUamUDU2wXao1aOLPSf/pub?gid=1991327576&single=true&output=tsv";
+//$file = "./announcements.txt";
+$document = file_get_contents($file);
+
+$lines = explode("\n",$document);
+
+
+foreach($lines as $newline) {
+echo $newline . '<br><br>';
+}
+
+
+?>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+body {
+    background-color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 200%;
+    color: white;
+	z-index: -3;
+    overflow-x: hidden;
+}
+
+#calendarLink a {
+    text-decoration: none;
+    color: gray;
+    font-size: 75%;
+}
+
+
+#calendarLink a:hover {
+    color: yellow;
+    transition-duration: .5s;
+}
+#timer {
+    visibility: visible;
+    background-color: white;
+}
+
+
+#main_page {
+    visibility: visible;
+}
+
+i {
+    opacity: 0.6;
+}
+
+table {
+    background-color: black;
+    width: 95%;
+	z-index: 10;
+}
+
+th {
+    background-color: turquoise;   
+}
+
+
+tr:nth-child(even) {
+    background: #BBB;
+}
+
+tr:nth-child(odd) {
+    background: #999;
+}
+
+.active {
+    background-color: aqua;
+}
+
+td, th {
+    padding: 10px;
+    border-radius: 3px;
+}
+
+div {
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+}
+
+.active {
+    background-color: purple;
+    color: aliceblue;
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
+
+    body {
+        font-size: 200%;
+    }
+    tr {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+        font-size: 100%;
+        border-radius: 15px;
+        margin: 10px;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .inactive {
+        opacity: 0.5;
+        color: black;
+        overflow-y: hidden;
+        min-height: 1.25em;
+        line-height: 1.25;
+        height: 1.75em;
+    }
+}
+
+.inactive {
+    opacity: 0.5;
+    color: black;
+}
+
+.inactive:hover {
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+.smaller {
+    font-size: 50%;
+    color: gainsboro;
+}
+
+#audio_on {
+    font-size: 75%;
+    text-align: right;
+}
+
+#flex {
+    display: flex;
+}
+
+#date {
+    width: 50%;
+    text-align: left;
+}
+
+#audio_on {
+    width: 50%;
+    text-align: right;
+}
+
+#logo {
+}
+
+#logo img {
+    height: 150px;
+}
+
+#birthday {
+    position: fixed;
+    top: 20vh;
+	right: 180px;
+    float: right;
+	z-index: -2;
+}
+
+.bday {
+	z-index:-1;
+	position: absolute;
+	background-color: red;
+	border: dotted;
+	opacity: .90;
+	border-radius: 8px;
+	width: 150px;
+	transition-duration: 1s;
+}
+
+#message {
+	z-index: 10;
+}
+
+.view-cap, .view-container-border { background-color:black; }
+.mv-daynames-table { color:white; background:black; }
+.mv-event-container { border-top:1px solid black; }

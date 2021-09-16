@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <canvas id="canvas" width="1000px" height="1000px">
+        
+        </canvas>
+    </body>
+    
+    <script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = 120;
+/*
+    drawWedge(8, 8 + 32/60, "red");
+    drawWedge(8 + 37 / 60, 9 + 28/60, "blue");
+    drawWedge(9 + 33 / 60, 10 + 24/60, "green");
+    drawWedge(10 + 29 / 60, 11 + 20/60, "orange");
+    drawWedge(11 + 25 / 60, 12 + 16/60, "purple");
+    drawWedge(12+21/60, 1+12/60, "yellow");
+    drawWedge(1 + 17/60, 2+8/60, "teal");
+    drawWedge(2+13/60, 3+4/60, "pink");
+        
+    drawWedge(8, 9, "red");
+    drawWedge(9 + 5 / 60, 9 + 52/60, "blue");
+    drawWedge(9 + 57 / 60, 10 + 44/60, "green");
+    drawWedge(10 + 49 / 60, 11 + 36/60, "orange");
+    drawWedge(11 + 41 / 60, 12 + 28/60, "purple");
+    drawWedge(12+33/60, 1+20/60, "yellow");
+    drawWedge(1 + 25/60, 2+12/60, "teal");
+    drawWedge(2+17/60, 3+4/60, "pink");
+*/
+    drawWedge(8, 8 + 34/60, "red");
+    drawWedge(8 + 39 / 60, 9 + 4/60, "blue");
+    drawWedge(9 + 9 / 60, 9 + 34/60, "green");
+    drawWedge(9 + 39 / 60, 10 + 4/60, "orange");
+    drawWedge(10 + 9 / 60, 10 + 34/60, "purple");
+    drawWedge(10+39/60, 11+4/60, "yellow");
+    drawWedge(11 + 9/60, 11+34/60, "teal");
+    drawWedge(11+39/60, 12+4/60, "pink");
+    drawWedge(12+30/60, 3+4/60, "gray");
+        
+        
+        function drawWedge(startHour, endHour, color) {
+    var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  
+    startAngle = -Math.PI / 2 + startHour * (0.2618 * 2);
+    endAngle = -Math.PI / 2 + endHour * (0.2618 * 2);
+    
+  // Our angle
+  var angle = Math.PI * 0.3;
+  
+  // Start a new path
+  ctx.beginPath();
+  
+  // Go to center of the Chart
+  ctx.moveTo(250, 250);
+  
+  // Draw an Arc
+  // arc(centerX, centerY, radius, angleStart, angleEnd)
+  ctx.arc(250, 250, 240, startAngle, endAngle);
+  
+  // Draw a line to close the pie slice
+  ctx.lineTo(250, 250);
+  
+  // Print the path
+    ctx.fillStyle=color;
+  ctx.fill();
+  ctx.stroke();
+
+    
+}
+
+    </script>
+</html>

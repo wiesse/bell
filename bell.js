@@ -5,10 +5,11 @@ var periodsB = [8*60, 9*60, 9*60+5, 9*60+52, 9*60+57, 10*60+44, 10*60+49, 11*60+
 //var periodsB = [8*60, 8*60+44, 8*60+49, 9*60+12, 9*60+17, 9*60+40, 9*60+45, 10*60+7, 10*60+12, 10*60+35, 10*60+40, 11*60+3, 11*60+8, 11*60+31, 11*60+36, 12*60];
 //var periodsC = [8*60, 8*60+34, 8*60+39, 9*60+4, 9*60+09, 9*60+34, 9*60+39, 10*60+4, 10*60+9, 10*60+34, 10*60+39, 11*60+4, 11*60+9, 11*60+34, 11*60+39, 12*60+4];
 //var periodsC = [8*60, 8*60+15, 8*60+15, 9*60, 9*60+05, 10*60, 10*60+05, 11*60, 11*60+5, 12*60+4];
+var periodsC = [11*60+11, 11*60+37, 11*60+40, 12*60+6, 12*60+9, 12*60+35, 12*60+38, 13*60+4, 13*60+7, 13*60+33, 13*60+36, 14*60+2, 14*60+5, 14*60+31, 14*60+34, 15*60+4];
 var periodsD = [10*60, 10*60+31, 10*60+36, 11*60+10, 11*60+15, 11*60+49, 11*60+54, 12*60+28, 12*60+33, 13*60+07, 13*60+12, 13*60+46, 13*60+51, 14*60+25, 14*60+30, 15*60+4];
 var periodsE = [9*60, 9*60+28, 9*60+33, 10*60+16, 10*60+21, 11*60+4, 11*60+9, 11*60+52, 11*60+57, 12*60+40, 12*60+45, 13*60+28, 13*60+33, 14*60+16, 14*60+21, 15*60+04];
 
-var all_periods = [periodsA, periodsB, periodsD, periodsE]
+var all_periods = [periodsA, periodsB, periodsD, periodsE, periodsC]
 
 var periods = periodsA;
 
@@ -16,7 +17,7 @@ var a_day = " 9-2 9-4 9-9 9-11 9-15 9-17 9-21 9-23 9-25 9-30 10-2 10-6 10-8 10-1
 
 var flash = 0;
 
-var schedules = ["scheduleA", "scheduleB", "scheduleD", "scheduleE"];
+var schedules = ["scheduleA", "scheduleB", "scheduleD", "scheduleE", "scheduleC"];
 
 var names = ["Advisory Starts", "Advisory Ends", 
              "First Period Starts", "First Period Ends",
@@ -31,11 +32,11 @@ var class_held = ["Morning", "Advisory", "Transition", "1st", "Transition", "2nd
 
 var classesA = ["advA", "oneA", "twoA", "threeA", "fourA", "fiveA", "sixA", "sevenA"];
 var classesB = ["advB", "oneB", "twoB", "threeB", "fourB", "fiveB", "sixB", "sevenB"];
-//var classesC = ["advC", "oneC", "twoC", "threeC", "fourC", "fiveC", "sixC", "sevenC"];
+var classesC = ["advC", "oneC", "twoC", "threeC", "fourC", "fiveC", "sixC", "sevenC"];
 var classesD = ["advD", "oneD", "twoD", "threeD", "fourD", "fiveD", "sixD", "sevenD"];
 var classesE = ["advE", "oneE", "twoE", "threeE", "fourE", "fiveE", "sixE", "sevenE"];
 
-var all_classes = [classesA, classesB, classesD, classesE];
+var all_classes = [classesA, classesB, classesD, classesE, classesC];
 
 var classes = classesA;
 var birthdays_today = [];

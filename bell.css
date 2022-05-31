@@ -69,13 +69,15 @@ div {
 }
 
 .active {
-    background-color: purple;
+    background-color: blue;
     color: aliceblue;
 }
 
 @media only screen and (hover: none) and (pointer: coarse){
 
     body {
+        background-color: green;
+
         font-size: 200%;
     }
     tr {
@@ -114,11 +116,6 @@ div {
 .inactive:hover {
     opacity: 1;
     transition-duration: 0.5s;
-}
-
-.smaller {
-    font-size: 50%;
-    color: gainsboro;
 }
 
 #audio_on {

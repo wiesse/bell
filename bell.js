@@ -71,7 +71,7 @@ function buildHTML() {
     for (let i = 0; i < schedules.length; i ++) {
         table += "<tr id='" + schedules[i].id + "' onclick = 'set_schedule(" + i + ");'>";
         table += "<th>" + schedules[i].text + "</th>";
-        for (j = 0; j < 8; j ++) {
+        for (j = 0; j < schedules[i].times.length/2; j ++) {
             table += "<td id = '" + get_td_id(i, j) + "'>" + time_from_minutes(schedules[i].times[j*2]) + "-" + time_from_minutes(schedules[i].times[j*2+1]) + "</td>";
         }
         table += "</tr>";
@@ -266,11 +266,11 @@ function main() {
      buildHTML();
 
     if (d.getDay() == 3) //wednesday
-        set_schedule(3);
+        set_schedule(1);
     else if (d.getDay() == 5) //friday
-        set_schedule(1);
+        set_schedule(2);
     else if (d.getDay() == 4) //thursday
-        set_schedule(1);
+        set_schedule(2);
     else
         set_schedule(0);
             

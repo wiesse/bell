@@ -76,7 +76,7 @@ div {
 @media only screen and (hover: none) and (pointer: coarse){
 
     body {
-        background-color: green;
+        background-color: black;
 
         font-size: 200%;
     }
@@ -137,7 +137,10 @@ div {
     text-align: right;
 }
 
-#logo {
+#foot {
+    font-size: 10px;
+    color: yellow;
+    text-align: right;
 }
 
 #logo img {

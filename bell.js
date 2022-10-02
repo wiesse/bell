@@ -364,7 +364,7 @@ function time_from_minutes(time) {
     else if (minutes < 10) minutes = "0" + minutes;
     return hours+":"+minutes;
 }
-
+/*
 let noteallowed = false;
 
 function push_notifications() {
@@ -392,4 +392,4 @@ function push_notifications() {
   
     // At last, if the user has denied notifications, and you
     // want to be respectful there is no need to bother them anymore.
-  }
+  }*/
